@@ -49,6 +49,7 @@ func get_input():
 	
 func damage(d):
 	health -= d
+	Global.update_lives(-1)
 	if health <= 0:
 		Effects = get_node_or_null("/root/Game/Effects")
 		if Effects != null:
